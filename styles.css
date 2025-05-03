@@ -85,4 +85,49 @@ mark:hover {
   text-align: left;
 }
 
-  
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  /* Hide unwanted items */
+  .grid-container > .item:nth-child(1),
+  .grid-container > .item:nth-child(3),
+  .grid-container > .item:nth-child(6),
+  .grid-container > .item:nth-child(7) {
+    display: none;
+  }
+
+  /* Reorder visible items */
+  .grid-container > .item:nth-child(4) { order: 1; } /* item 4 */
+  .grid-container > .item:nth-child(2) { order: 2; } /* item 2 */
+  .grid-container > .item:nth-child(9) { order: 3; } /* item 9 */
+  .image-box                            { order: 4; } /* image box */
+
+  /* ✅ Keep image positioned absolute to allow overlay */
+  .image-box {
+    grid-row: auto;
+    height: 250px; /* Set a height so the absolutely-positioned image fills it */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-img {
+    position: absolute; /* <- This is key */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+
+  .overlay-text {
+    position: absolute; /* Overlay on top of the image */
+    z-index: 1;
+    line-height: 200%;
+    text-align: left;
+    margin: auto;
+  }
+}
