@@ -161,3 +161,34 @@ mark:hover {
     margin: auto;
   }
 }
+
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  max-height: 150px; /* limit height */
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.gallery-container a:hover img {
+  transform: scale(1.05);
+  border-color: #666;
+}
+
+/* Mobile layout: 4 columns */
+@media (max-width: 600px) {
+  .gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
