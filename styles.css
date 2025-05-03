@@ -8,7 +8,8 @@ body {
 }
   
 h1 {
-  color: #c500cc;
+  color: #000000;
+  font-family: Arial;
 }
 
 mark {
@@ -81,7 +82,7 @@ mark:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80%;
   height: auto;
   z-index: 0;
 }
@@ -163,32 +164,46 @@ mark:hover {
 }
 
 
+.gallery-wrapper {
+  display: flex;
+  align-items: flex-start; /* top-align the title and grid */
+  gap: 40px;
+  padding: 20px;
+}
+
+/* Left column: Title */
+.gallery-title {
+  min-width: 200px; /* adjust as needed */
+  font-size: 1.5rem;
+}
+
+/* Right column: Image grid */
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 10px;
-  padding: 20px;
+  flex-grow: 1;
 }
 
+/* Images (use your cleaned-up version here) */
 .gallery-container img {
   width: 100%;
   height: auto;
-  max-height: 150px; /* limit height */
-  object-fit: cover;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  transition: transform 0.2s;
+  display: block;
 }
 
-.gallery-container a:hover img {
-  transform: scale(1.05);
-  border-color: #666;
-}
-
-/* Mobile layout: 4 columns */
+/* Responsive layout */
 @media (max-width: 600px) {
+  .gallery-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .gallery-container {
     grid-template-columns: repeat(4, 1fr);
   }
-}
 
+  .gallery-title {
+    margin-bottom: 10px;
+  }
+}
