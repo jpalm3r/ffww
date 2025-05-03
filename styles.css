@@ -1,0 +1,29 @@
+body {
+    background-color: #ffffff;
+    background-repeat: repeat-y;
+    background-position: center; 
+    margin: 0;
+    height: 100%;
+    position: relative;
+  }
+  
+h1 {
+    color: #c500cc;
+  }
+  
+
+.projecte {
+    /* Vertically centers  content*/ 
+    border: .7vmax solid #000000;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: .5vw;
+    margin-right: .5vw;
+    padding-top: .5rem;
+    line-height: 150%;
+    font-size: clamp(0.5rem, 5vw, 1rem);
+    color: hwb(8 15% 32%);
+    overflow: hidden;
+  }
