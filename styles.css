@@ -60,6 +60,14 @@ mark:hover {
   padding: 0;
 }
 
+.lletra-mitjana {
+  /* Vertically centers  content*/
+  font-family: Arial;
+  margin-top: 0;
+  font-size: clamp(4rem, 5.5vw, 8rem);
+  text-align: left;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr 1.4fr 1fr;
@@ -163,6 +171,7 @@ mark:hover {
   }
 }
 
+/* GALLERY */
 
 .gallery-wrapper {
   display: grid;
@@ -182,7 +191,7 @@ mark:hover {
 /* Grid of thumbnails */
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
 }
 
