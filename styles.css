@@ -68,6 +68,15 @@ mark:hover {
   text-align: left;
 }
 
+.lletra-petita {
+  /* Vertically centers  content*/
+  font-family: Arial;
+  font-size: clamp(2rem, 3.5vw, 5rem);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr 1.4fr 1fr;
