@@ -23,6 +23,15 @@ mark:hover {
   padding: 0.4vmax; /* Adds extra height */
 }
 
+.hover-underline {
+  color: inherit; /* keep normal text color */
+  text-decoration: none;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
 .projecte {
   /* Vertically centers  content*/ 
   border: .3vmax solid #000000;
