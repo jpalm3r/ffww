@@ -85,6 +85,27 @@ mark:hover {
   text-align: left;
 }
 
+.top-header {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 999;
+}
+
+.top-header a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.top-header a:hover {
+  color: #0077b5; /* LinkedIn blue as hover example */
+}
+
+
 
 @media (max-width: 600px) {
   .grid-container {
