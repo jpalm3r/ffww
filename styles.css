@@ -165,45 +165,30 @@ mark:hover {
 
 
 .gallery-wrapper {
-  display: flex;
-  align-items: flex-start; /* top-align the title and grid */
-  gap: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 20px;
   padding: 20px;
 }
 
-/* Left column: Title */
+/* Title on the left */
 .gallery-title {
-  min-width: 200px; /* adjust as needed */
-  font-size: 1.5rem;
+  text-align: left;
+  padding-top: 0;
+  font-size: 1.2rem;
 }
 
-/* Right column: Image grid */
+/* Grid of thumbnails */
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 10px;
-  flex-grow: 1;
 }
 
-/* Images (use your cleaned-up version here) */
+/* Images */
 .gallery-container img {
   width: 100%;
   height: auto;
   display: block;
-}
-
-/* Responsive layout */
-@media (max-width: 600px) {
-  .gallery-wrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .gallery-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .gallery-title {
-    margin-bottom: 10px;
-  }
 }
