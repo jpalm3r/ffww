@@ -15,13 +15,12 @@ h1 {
 mark {
   background-color: #15eb15;
   color: black;
-  padding: 0.4vmax;
+  padding: 0.3vmax;
 }
 
 mark:hover {
   background-color: #FF2F08;
   color: rgb(255, 255, 255);
-  padding: 0.4vmax; /* Adds extra height */
 }
 
 @font-face {
@@ -62,7 +61,7 @@ mark:hover {
 .lletra-gran {
   /* Vertically centers  content*/
   font-family: "funkier_title";
-  font-size: clamp(5rem, 7.5vw, 10rem);
+  font-size: clamp(5rem, 6vw, 9rem);
   text-align: left;
   word-spacing: 120%;
   letter-spacing: 0px;
@@ -89,10 +88,11 @@ mark:hover {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 0.5fr 1.4fr 1fr;
+  grid-template-columns: 0.7fr 1.4fr 0.7fr;
   grid-template-rows: auto auto auto; /* or just `repeat(3, auto)` */
-  column-gap: 40px;
-  padding: 20px;
+  column-gap: 2em;
+  row-gap: 1em;
+  padding-top: 8vh;
 }
   
 .item {
@@ -116,11 +116,11 @@ mark:hover {
 
 .overlay-text {
   font-family: Helvetica;
-  font-size: clamp(0.5rem, 1.5vw, 2rem);
-  line-height: clamp(2rem, 3.5vw, 5rem);
+  font-size: 1.8em;
+  line-height: 2.5em;
   position: relative; /* So it's above the image */
   z-index: 1;
-  margin: 70px 10px 0 50px;
+  margin: 7vh 18vw 0 3vw;
   color: white;
   text-align: left;
 }
@@ -151,6 +151,8 @@ mark:hover {
   .grid-container {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
 
   /* Hide unwanted items */
@@ -162,10 +164,10 @@ mark:hover {
   }
 
   /* Reorder visible items */
-  .grid-container > .item:nth-child(4) { order: 1; } /* item 4 */
-  .grid-container > .item:nth-child(2) { order: 2; } /* item 2 */
-  .grid-container > .item:nth-child(9) { order: 3; } /* item 9 */
-  .image-box                            { order: 4; } /* image box */
+  .grid-container > .item:nth-child(4) { order: 3;} /* item 4 */
+  .grid-container > .item:nth-child(2) { order: 2;} /* item 2 */
+  .grid-container > .item:nth-child(9) { order: 1;} /* item 9 */
+  .image-box                            { order: 4;} /* image box */
 
   /* ✅ Keep image positioned absolute to allow overlay */
   .image-box {
@@ -186,9 +188,9 @@ mark:hover {
 
   .overlay-text {
     position: absolute; /* Overlay on top of the image */
-    font-size: clamp(1rem, 0.5vw, 2rem);
-    line-height: clamp(1rem, 1vw, 2.5rem);
-    margin: auto;
+    font-size: 1em;
+    line-height: 2em;
+    margin:   2vh 20vh 0 3vw;
   }
 }
 
