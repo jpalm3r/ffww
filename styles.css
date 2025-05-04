@@ -40,7 +40,6 @@ mark:hover {
 }
 
 .hover-underline:hover {
-  color: #FF2F08;
   text-transform: lowercase;
 }
 
