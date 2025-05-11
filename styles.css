@@ -20,9 +20,9 @@ h1 {
 }
 
 mark {
-  background-color: #15eb15;
+  background-color: #ffffff00;
   color: black;
-  padding: 0.3vmax;
+  padding: 0.2vmax;
 }
 
 mark:hover {
@@ -66,16 +66,15 @@ mark:hover {
 
 
 .lletra-gran {
-  /* Vertically centers  content*/
+  /* Vertically centers content */
   font-family: "funkier_title";
-  font-size: clamp(7rem, 11vw, 11rem);
-  text-align: left;
-  word-spacing: 120%;
-  letter-spacing: -1%;
+  font-size: clamp(6rem, 11vw, 11rem);
   margin: 0;
   padding: 0;
+  word-spacing: 120%;
+  letter-spacing: -1%;
   display: inline-block; /* required for transform */
-  transform: scaleY(1.6); /* 1.5 = 150% taller */
+  transform: scaleY(1.4); /* 1.5 = 150% taller */
   transform-origin: top; /* or 'bottom' or 'top' */
 }
 
@@ -111,7 +110,7 @@ mark:hover {
 }
   
 .item {
-  text-align: center;
+  display: flex;
 }
 
 .image-box {
