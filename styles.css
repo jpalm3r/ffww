@@ -1,8 +1,16 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+body.no-scroll {
   overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  touch-action: none;
+}
+
+body.scroll {
+  overflow: auto;
+  position: static;
+  height: auto;
+  touch-action: auto;
 }
   
 h1 {
@@ -73,9 +81,12 @@ mark:hover {
 .lletra-mitjana {
   /* Vertically centers  content*/
   font-family: "funkier_title";
-  margin-top: 0;
-  font-size: clamp(4rem, 5.5vw, 8rem);
+  margin: 0;
+  padding: 0;
+  font-size: clamp(4.5rem, 5vw, 6.5rem);
   text-align: right;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 .lletra-petita {
@@ -148,6 +159,37 @@ mark:hover {
   color: #0077b5; /* LinkedIn blue as hover example */
 }
 
+/* GALLERY */
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Title on the left */
+.gallery-title {
+  text-align: left;
+  padding-top: 0;
+  font-size: 1.2rem;
+  width: 5vw;
+}
+
+/* Grid of thumbnails */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* Images */
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 @media (max-width: 600px) {
@@ -199,35 +241,8 @@ mark:hover {
   .lletra-gran {
     transform: none;
   }
-}
 
-/* GALLERY */
-
-.gallery-wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: 20px;
-  padding: 20px;
-}
-
-/* Title on the left */
-.gallery-title {
-  text-align: left;
-  padding-top: 0;
-  font-size: 1.2rem;
-}
-
-/* Grid of thumbnails */
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-}
-
-/* Images */
-.gallery-container img {
-  width: 100%;
-  height: auto;
-  display: block;
+  .gallery-title {
+    width: 20vw;
+  }
 }
