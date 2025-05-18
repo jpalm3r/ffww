@@ -72,7 +72,7 @@ mark:hover {
 .lletra-gran {
   /* Vertically centers content */
   font-family: "funkier_title";
-  font-size: clamp(6rem, 11vw, 11rem);
+  font-size: 9vw;
   margin: 0;
   padding: 0;
   word-spacing: 120%;
@@ -110,7 +110,7 @@ mark:hover {
   height: 100vh;
   gap: 30px;
   box-sizing: border-box;
-  padding: 8vh 0 3vh 0;
+  padding: 9vh 0 4vh 0;
 }
   
 .item {
@@ -139,9 +139,10 @@ mark:hover {
   font-weight: bold;
   font-size: 2em;
   line-height: 2.1em;
+  width: 50%;
   position: relative; /* So it's above the image */
   z-index: 1;
-  margin: 4vh 12vw 0 3vw;
+  margin: 3vh 2vw auto 2vw;
   text-align: left;
 }
 
@@ -221,10 +222,10 @@ mark:hover {
   .grid-container > .item:nth-child(9) { order: 1;} /* item 9 */
   .image-box                            { order: 4;} /* image box */
 
-  /* ✅ Keep image positioned absolute to allow overlay */
   .image-box {
     grid-row: auto;
-    height: 350px; /* Set a height so the absolutely-positioned image fills it */
+    height: 200px; /* Set a height so the absolutely-positioned image fills it */
+    width: auto;
     position: relative;
     overflow: hidden;
   }
@@ -233,16 +234,15 @@ mark:hover {
     position: absolute; /* <- This is key */
     top: 0;
     right: 0;
-    height: 250px;
-    width: auto;
     z-index: 0;
   }
 
   .overlay-text {
     position: absolute; /* Overlay on top of the image */
-    font-size: 1em;
-    line-height: 1.7em;
-    margin:   1vh 15vh 0 3vw;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    width: 90%;
+    margin:   1vh 3vh 0 3vw;
   }
 
   .lletra-gran {
