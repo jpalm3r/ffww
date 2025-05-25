@@ -195,8 +195,8 @@ mark:hover {
 
 .projecte {
   /* Vertically centers  content*/
-  display: grid;
   border: .7vmax solid #000000;
+  border-radius: 20px;
   background-color: #ffffff;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -205,10 +205,16 @@ mark:hover {
   margin-bottom: 10vh;
   padding-top: .5rem;
   padding-bottom: 1rem;
-  line-height: 150%;
-  font-size: clamp(0.5rem, 5vw, 1rem);
   color: hwb(219 7% 42%);
-  overflow: hidden;
+}
+
+.project-description {
+  line-height: 150%;
+  font-size: clamp(12px, 1.5rem, 10vw);
+  color: #000000;
+  overflow-wrap: break-word;
+  word-wrap: break-word; /* for older browsers */
+  white-space: normal;
 }
 
 .project-thumbnail-container {
@@ -291,5 +297,10 @@ mark:hover {
     margin-right: 5vw;
     margin-bottom: 7vh;
     border: .8vmax solid #000000;
+  }
+
+  .project-thumbnail-container {
+    grid-template-columns: 1fr;
+    row-gap: 30px; /* More space between rows */
   }
 }
