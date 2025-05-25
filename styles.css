@@ -194,18 +194,35 @@ mark:hover {
 }
 
 .projecte {
-  /* Vertically centers  content*/ 
-  border: .8vmax solid #000000;
+  /* Vertically centers  content*/
+  display: grid;
+  border: .7vmax solid #000000;
   background-color: #ffffff;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: 20vw;
   margin-right: 20vw;
+  margin-bottom: 10vh;
   padding-top: .5rem;
+  padding-bottom: 1rem;
   line-height: 150%;
   font-size: clamp(0.5rem, 5vw, 1rem);
   color: hwb(219 7% 42%);
   overflow: hidden;
+}
+
+.project-thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 5vh;
+  gap: 10px;
+}
+
+/* Images */
+.project-thumbnail-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
@@ -272,5 +289,7 @@ mark:hover {
   .projecte {
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-bottom: 7vh;
+    border: .8vmax solid #000000;
   }
 }
