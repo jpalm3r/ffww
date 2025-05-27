@@ -196,12 +196,13 @@ mark:hover {
 .title-project {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: clamp(2rem, 4.5vmax, 4rem);
-  font-stretch: extra-condensed;
-  letter-spacing: 0px;
-  margin-top: 3vh;
-  margin-bottom: 2vh;
-  margin-left: 3vh;
+  font-size: clamp(2rem, 8vmax, 5.5rem);
+  letter-spacing: -2px;
+  word-spacing: 0px;
+  margin: 2vh auto 1vh auto;
+  padding: 1vh auto 0.5vh auto;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .projecte {
@@ -220,21 +221,21 @@ mark:hover {
 }
 
 .project-description {
-  line-height: 150%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(12px, 1.5rem, 10vw);
+  line-height: 130%;
+  font-family: monospace;
+  font-size: clamp(12px, 1.7rem, 10vw);
   color: #000000;
   overflow-wrap: break-word;
   word-wrap: break-word; /* for older browsers */
   white-space: normal;
-  padding-left: 3vh;
-  padding-top: 1vh;
+  padding: 1vh 3vh 0.5vh 3vh;
+  margin: 1vh 0 0.5vh 0;
 }
 
 .project-thumbnail-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin: 5vh;
+  margin: 3vh;
   gap: 10px;
 }
 
@@ -306,6 +307,10 @@ mark:hover {
     margin-bottom: 5vh;
   }
 
+  .title-project {
+    font-size: clamp(1.5rem, 7.5vmax, 4rem);
+  }
+
   .projecte {
     margin-left: 5vw;
     margin-right: 5vw;
@@ -316,5 +321,10 @@ mark:hover {
   .project-thumbnail-container {
     grid-template-columns: 1fr;
     row-gap: 30px; /* More space between rows */
+  }
+
+  .project-description {
+    font-size: clamp(12px, 1.4rem, 10vw);
+    padding: 1vh 0 0.5vh 0;
   }
 }
