@@ -23,17 +23,6 @@ h1 {
   font-family: Arial;
 }
 
-mark {
-  background-color: #ffffff00;
-  color: black;
-  padding: 0.2vmax;
-}
-
-mark:hover {
-  background-color: #FF2F08;
-  color: rgb(255, 255, 255);
-}
-
 @font-face {
   font-family: "funky_title";
   src: url("fonts/KCWaxMuseum.otf") format("opentype");
@@ -246,6 +235,44 @@ mark:hover {
   display: block;
 }
 
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  width: 25%; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  padding: 0.5rem;
+  font-size: 5.6vh;
+  color: #0077b5;
+}
+
+.icon-column a {
+  color: rgb(0, 26, 255); 
+  text-decoration: none;
+}
+
+.icon-column a:hover {
+  color: rgb(255, 30, 0);             /* On hover */
+}
+
+.icon-column a:visited {
+  color: rgb(0, 26, 255);            /* After visiting (browser-controlled) */
+}
+
+mark {
+  font-family: monospace;
+  letter-spacing: 0px;
+  color: white;
+  background-color: rgb(0, 26, 255);
+  padding: 0.2vmax;
+}
+
+
 
 @media (max-width: 900px) {
   .grid-container {
@@ -326,5 +353,14 @@ mark:hover {
   .project-description {
     font-size: clamp(12px, 1.4rem, 10vw);
     padding: 1vh 0 0.5vh 0;
+  }
+
+  .column {
+    padding: 0.5rem;
+    font-size: 3.5vh;
+  }
+
+  .three-column-layout {
+    width: 60%; 
   }
 }
