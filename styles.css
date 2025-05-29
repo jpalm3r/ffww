@@ -96,6 +96,7 @@ h2 {
   grid-template-rows: 1fr 1fr 2fr; /* 3 equal-height rows */
   width: 100vw;
   height: 100vh;
+  left: 0;
   gap: 30px;
   box-sizing: border-box;
   padding: 9vh 8vh 4vh 3vh;
@@ -300,6 +301,8 @@ mark {
     padding: 5vh 4vw 2vh 4vw;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5px;
+    position: absolute;
   }
 
   /* Hide unwanted items */
