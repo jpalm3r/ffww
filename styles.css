@@ -37,13 +37,14 @@ h2 {
   src: url("fonts/KCUppercut.otf") format("opentype");
 }
 
-.hover-underline {
+.inner-link {
   color: inherit; /* keep normal text color */
   text-decoration: none;
 }
 
-.hover-underline:hover {
+.inner-link:hover {
   text-transform: lowercase;
+  text-decoration: underline;
 }
 
 
