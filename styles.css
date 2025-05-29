@@ -52,7 +52,7 @@ h1 {
   word-spacing: 120%;
   letter-spacing: -1%;
   display: inline-block; /* required for transform */
-  transform: scaleY(1.4); /* 1.5 = 150% taller */
+  /*transform: scaleY(1.4);  1.5 = 150% taller */
   transform-origin: top; /* or 'bottom' or 'top' */
 }
 
@@ -76,6 +76,19 @@ h1 {
   padding: 0;
 }
 
+.work {
+  margin: 0;
+}
+
+.fun {
+  margin: auto 0 auto auto;
+}
+
+.fun-work {
+  margin: auto auto 0 0;
+  transform-origin: bottom;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 0.6fr 1.25fr 0.7fr;
@@ -94,18 +107,16 @@ h1 {
 .image-box {
   grid-row: span 2;
   position: relative;
-  overflow: visible; /* Allow the image to overflow downward */
+  overflow: visible;
 }
 
 .bg-img {
-  position: absolute;
+  position: absolute; /* <- This is key */
   bottom: 0;
   right: 0;
-  width: 100%;
+  width: 60%;
   height: auto;
-  z-index: -1;
-  max-width: none; 
-  max-height: none;
+  z-index: 0;
 }
 
 .overlay-text {
@@ -278,9 +289,8 @@ mark {
   .grid-container {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 20px;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    gap: 10px;
+    padding: 0 6vw 1vh 6vw;
   }
 
   /* Hide unwanted items */
@@ -297,21 +307,30 @@ mark {
   .grid-container > .item:nth-child(9) { order: 1;} /* item 9 */
   .image-box                            { order: 4;} /* image box */
 
+  .work {
+    margin: auto auto 0 0;
+  }
+
+  .fun {
+    margin: 0 auto auto 0;
+  }
+
+  .fun-work {
+    margin: auto auto 0 0;
+    transform-origin: bottom;
+  }
+
   .image-box {
     grid-row: auto;
     height: 200px; /* Set a height so the absolutely-positioned image fills it */
     width: auto;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .bg-img {
-    position: absolute; /* <- This is key */
-    top: 0;
-    right: 0;
-    z-index: 0;
+    width: 80%;
   }
-
   .overlay-text {
     position: absolute; /* Overlay on top of the image */
     font-size: 1.2em;
