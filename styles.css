@@ -20,8 +20,12 @@ body.scroll {
   
 h1 {
   color: #000000;
-  font-family: Arial;
 }
+
+h2 {
+  color: #000000;
+}
+
 
 @font-face {
   font-family: "funky_title";
@@ -123,9 +127,9 @@ h1 {
 .overlay-text {
   font-family: monospace;
   font-weight: bold;
-  font-size: 2em;
-  line-height: 1.9em;
-  width: 40%;
+  font-size: 2.2em;
+  line-height: 1.7em;
+  width: 45%;
   position: relative; /* So it's above the image */
   z-index: 1;
   margin: 3.0vh 2vw auto 1.5vw;
@@ -204,6 +208,14 @@ h1 {
   padding: 1vh auto 0.5vh auto;
   text-align: left;
   text-transform: uppercase;
+}
+
+.title-snapshots {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 3vmax, 2.5rem);
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  margin: 2vh auto 1vh auto;
 }
 
 .projecte {
@@ -364,13 +376,13 @@ mark {
   }
 
   .title-project {
-    font-size: clamp(1.5rem, 7.5vmax, 4rem);
+    font-size: clamp(1.5rem, 6vmax, 4rem);
   }
 
   .projecte {
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-bottom: 7vh;
+    margin-bottom: 5vh;
     border: .8vmax solid #000000;
   }
 
@@ -380,13 +392,14 @@ mark {
   }
 
   .project-description {
+    text-align: left;
     font-size: clamp(12px, 1.4rem, 10vw);
-    padding: 1vh 0 0.5vh 0;
+    padding: 1vh 1vh 0.5vh 1vh;
   }
 
   .column {
-    padding: 0.5rem;
-    font-size: 3.5vh;
+    padding: 0.1rem;
+    font-size: 3.3vh;
   }
 
   .three-column-layout {
