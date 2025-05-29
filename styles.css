@@ -44,7 +44,6 @@ h2 {
 
 .inner-link:hover {
   text-transform: lowercase;
-  text-decoration: underline;
 }
 
 
@@ -52,7 +51,7 @@ h2 {
   /* Vertically centers content */
   font-family: "funkier_title";
   font-size: 10vw;
-  word-spacing: 120%;
+  word-spacing: 100%;
   letter-spacing: -1%;
   display: inline-block; /* required for transform */
   transform: scaleY(1.5);  /*1.5 = 150% taller */
@@ -120,7 +119,7 @@ h2 {
   bottom: 0;
   right: 0;
   margin-bottom: 0;
-  width: 60%;
+  width: 50%;
   height: auto;
   z-index: 0;
 }
@@ -247,7 +246,7 @@ h2 {
 
 .project-thumbnail-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   margin: 3vh;
   gap: 10px;
 }
@@ -271,7 +270,7 @@ h2 {
 
 .column {
   padding: 0.5rem;
-  font-size: 5.6vh;
+  font-size: clamp(1rem, 4vmax, 3rem);
   color: #0077b5;
 }
 
