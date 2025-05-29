@@ -61,7 +61,6 @@ h2 {
   color: black;
   font-family: "funkier_title";
   font-size: clamp(5rem, 11vmax, 14rem);
-  word-spacing: 100%;
   letter-spacing: -1%;
   display: inline-block; /* required for transform */
   transform: scaleY(1.5);  /*1.5 = 150% taller */
@@ -218,7 +217,6 @@ h2 {
   font-weight: bold;
   font-size: clamp(2rem, 8vmax, 5.5rem);
   letter-spacing: -2px;
-  word-spacing: 0px;
   margin: 2vh auto 1vh auto;
   padding: 1vh auto 0.5vh auto;
   text-align: left;
@@ -229,7 +227,6 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(1rem, 3vmax, 2.5rem);
   letter-spacing: 0px;
-  word-spacing: 0px;
   margin: 2vh auto 1vh auto;
 }
 
