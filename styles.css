@@ -60,7 +60,7 @@ h2 {
   /* Vertically centers content */
   color: black;
   font-family: "funkier_title";
-  font-size: 10vw;
+  font-size: clamp(5rem, 11vmax, 14rem);
   word-spacing: 100%;
   letter-spacing: -1%;
   display: inline-block; /* required for transform */
@@ -105,13 +105,13 @@ h2 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.7fr;
-  grid-template-rows: repeat(3, 1fr); /* 3 equal-height rows */
+  grid-template-columns: 0.9fr 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr; /* 3 equal-height rows */
   width: 100vw;
   height: 100vh;
   gap: 30px;
   box-sizing: border-box;
-  padding: 9vh 0 4vh 0;
+  padding: 9vh 8vh 4vh 3vh;
 }
   
 .item {
@@ -138,8 +138,8 @@ h2 {
   font-family: monospace;
   font-weight: bold;
   font-size: clamp(1.5rem, 1.2vmax, 2.3rem);
-  line-height: 1.7em;
-  width: clamp(200px, 50vw, 600px);
+  line-height: 1.5em;
+  width: clamp(200px, 30vw, 100%);
   position: relative; /* So it's above the image */
   z-index: 1;
   margin: 3.0vh 2vw auto 1.5vw;
@@ -307,7 +307,7 @@ mark {
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto 0.7fr 2fr;
@@ -350,7 +350,7 @@ mark {
 
   .image-box {
     grid-row: auto;
-    height: 200px; /* Set a height so the absolutely-positioned image fills it */
+    height: 100%; /* Set a height so the absolutely-positioned image fills it */
     width: auto;
     position: relative;
     overflow: visible;
