@@ -36,6 +36,7 @@ h2 {
 
 .text-inner-link {
   text-decoration: underline;
+  font-weight: bold;
   color: black;
 }
 
@@ -124,7 +125,7 @@ h2 {
 
 .overlay-text {
   font-family: monospace;
-  font-weight: bold;
+  font-weight: 500;
   font-size: clamp(1.5rem, 1.5vmax, 2.5rem);
   line-height: 1.5em;
   width: clamp(200px, 25vw, 100%);
@@ -198,7 +199,8 @@ h2 {
   font-size: 10vw;
   letter-spacing: -2px;
   margin-top: 3vh;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
+  text-align: center;
 }
 
 .title-project {
@@ -371,6 +373,7 @@ mark {
   .title-projects-page {
     font-size: 18vw;
     margin-bottom: 5vh;
+    text-align: left;
   }
 
   .title-project {
