@@ -403,7 +403,7 @@ mark {
 
   .project-description {
     text-align: left;
-    font-size: clamp(12px, 1.4rem, 10vw);
+    font-size: clamp(12px, 1.3rem, 9vw);
     padding: 1vh 1vh 0.5vh 1vh;
   }
 
