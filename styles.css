@@ -49,10 +49,10 @@ h2 {
   /* Vertically centers content */
   color: black;
   font-family: "funkier_title";
-  font-size: clamp(5rem, 11vmax, 14rem);
+  font-size: clamp(5rem, 12vmax, 9.5em);
   letter-spacing: -1%;
   display: inline-block; /* required for transform */
-  transform: scaleY(1.5);  /*1.5 = 150% taller */
+  transform: scaleY(2);  /*1.5 = 150% taller */
 }
 
 .lletra-mitjana {
@@ -76,8 +76,8 @@ h2 {
 }
 
 .work {
-  margin: 3% auto auto 0;
-  transform-origin: top;
+  margin: auto auto auto 0;
+  transform-origin: left;
 }
 
 .fun {
@@ -86,21 +86,21 @@ h2 {
 }
 
 .fun-work {
-  grid-column: span 2;
-  margin: auto auto 0 0;
-  transform-origin: bottom;
+  margin: auto;
+  transform-origin: right;
+  word-wrap: normal;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 0.9fr 1.4fr 1fr;
-  grid-template-rows: 1fr 1fr 1.2fr; /* 3 equal-height rows */
+  grid-template-columns: 18vw 40vw 20vw;
+  grid-template-rows: 20vh 20vh 20vh; /* 3 equal-height rows */
   width: 100vw;
   height: 100vh;
   left: 0;
-  gap: 30px;
+  gap: 1vh;
   box-sizing: border-box;
-  padding: 9vh 8vh 4vh 3vh;
+  padding: 20vh 11vw 17vw 11vw;
 }
   
 .item {
@@ -108,7 +108,6 @@ h2 {
 }
 
 .image-box {
-  grid-row: span 2;
   position: relative;
   overflow: visible;
 }
@@ -116,23 +115,37 @@ h2 {
 .bg-img {
   position: absolute; /* <- This is key */
   bottom: 0;
-  right: 0;
+  left: 0;
   margin-bottom: 0;
-  width: 50%;
+  width: 120%;
   height: auto;
-  z-index: 0;
+  z-index: -1 ;
 }
 
 .overlay-text {
   font-family: monospace;
   font-weight: 500;
   font-size: clamp(1.5rem, 1.5vmax, 2.5rem);
-  line-height: 1.5em;
-  width: clamp(200px, 25vw, 100%);
-  position: relative; /* So it's above the image */
+  line-height: 1.3em;
+  width: 100%;
   z-index: 1;
-  margin: 3.0vh 2vw auto 1.5vw;
-  text-align: left;
+}
+
+
+.geese-in {
+  position: fixed;
+  top: 45%;
+  left: 0%;
+  transform: translate(-40%, -50%);
+  z-index: -1;
+}
+
+.geese-out {
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translate(-40%, -50%);
+  z-index: -1;
 }
 
 .top-header {
