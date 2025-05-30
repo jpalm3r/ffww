@@ -173,6 +173,21 @@ h2 {
   color: #0077b5; /* LinkedIn blue as hover example */
 }
 
+.presentacio-mobil {
+  display: none;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 1.2vmax, 2.5rem);
+  line-height: 1.3em;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  text-align: right;
+  margin-right: 2vw;
+  margin-bottom: 2vh;
+  width: 100%;
+}
+
 /* GALLERY */
 
 .gallery-wrapper {
@@ -322,16 +337,33 @@ mark {
 
   /* Hide unwanted items */
   .grid-container > .item:nth-child(1),
-  .grid-container > .item:nth-child(5),
-  .grid-container > .item:nth-child(6) {
+  .grid-container > .item:nth-child(2),
+  .grid-container > .item:nth-child(3),
+  .grid-container > .item:nth-child(7),
+  .grid-container > .item:nth-child(8) {
+    display: none;
+  }
+
+  .geese-in {
+    display: none;
+  }
+  .geese-out {
+    top: 35%;
+    height: 60%;
+  }
+  .overlay-text {
     display: none;
   }
 
   /* Reorder visible items */
-  .grid-container > .item:nth-child(3) { order: 1;} 
-  .grid-container > .item:nth-child(2) { order: 2;} 
-  .grid-container > .item:nth-child(7) { order: 3;}
-  .grid-container > .item:nth-child(4) { order: 4;}
+  .grid-container > .item:nth-child(4) { order: 1;} 
+  .grid-container > .item:nth-child(5) { order: 2;} 
+  .grid-container > .item:nth-child(6) { order: 3;}
+  .grid-container > .item:nth-child(9) { order: 4;}
+
+  .presentacio-mobil {
+    display: block;
+  }
 
   .work {
     text-align: right;
@@ -359,20 +391,7 @@ mark {
     overflow: visible;
   }
 
-  .bg-img {
-    width: 40%;
-    left: 0;
-    bottom: 0;
-  }
-  .overlay-text {
-    position: absolute; /* Overlay on top of the image */
-    font-size: 1.6em;
-    line-height: 1.2em;
-    width: 80%;
-    margin: 0 0 0 auto;
-    text-align: right;
-    right: 0;
-  }
+
 
   .lletra-gran {
     transform: none;
