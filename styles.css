@@ -1,5 +1,12 @@
+:root {
+  --color-one: rgb(150, 150, 150);
+  --color-two: #0519ff;
+  --color-three: #FFFFE4;
+  --highlight-color: #3cff00;
+}
+
 body {
-  background-color: #FFFFE4;
+  background-color: var(--color-three);
   overflow: auto;
   position: static;
   height: auto;
@@ -32,7 +39,7 @@ h2 {
 
 .inner-link:hover {
   text-transform: lowercase;
-  color: rgb(72, 211, 59);
+  color: var(--color-one);
   z-index: 1;
 }
 
@@ -43,7 +50,7 @@ h2 {
 }
 
 .text-inner-link:hover {
-  color: rgb(72, 211, 59);
+  color: var(--color-one);
 }
 
 
@@ -66,15 +73,6 @@ h2 {
   text-align: right;
   writing-mode: vertical-rl;
   text-orientation: upright;
-}
-
-.lletra-petita {
-  /* Vertically centers  content*/
-  font-family: Arial;
-  font-size: clamp(2rem, 3.5vw, 5rem);
-  text-align: left;
-  margin: 0;
-  padding: 0;
 }
 
 .work {
@@ -132,6 +130,8 @@ h2 {
   left: 0%;
   transform: translate(-40%, -50%);
   z-index: -1;
+  height: 50%;
+  width: auto;
 }
 
 .geese-out {
@@ -140,6 +140,8 @@ h2 {
   left: 100%;
   transform: translate(-40%, -50%);
   z-index: -1;
+  height: 50%;
+  width: auto;
 }
 
 .top-header {
@@ -157,14 +159,14 @@ h2 {
 }
 
 .top-header a {
-  color: #333;
+  color: black;
   text-decoration: none;
   font-size: 1.5rem;
   transition: color 0.2s;
 }
 
 .top-header a:hover {
-  color: #0077b5; /* LinkedIn blue as hover example */
+  color: var(--color-two); /* LinkedIn blue as hover example */
 }
 
 .presentacio-mobil {
@@ -245,9 +247,9 @@ h2 {
 
 .projecte {
   /* Vertically centers  content*/
-  border: .7vmax solid #000000;
+  border: .7vmax solid black;
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: white;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: 20vw;
@@ -300,18 +302,18 @@ h2 {
 
 .icon-column a {
   text-decoration: none;
-  color: rgb(0, 26, 255);
+  color: var(--color-two);
 }
 
 .icon-column a:hover {
-  color: rgb(72, 211, 59);
+  color: var(--color-one);
 }
 
 mark {
   font-family: monospace;
   letter-spacing: 0px;
   color: white;
-  background-color: rgb(0, 26, 255);
+  background-color: var(--color-two);
   padding: 0.2vmax;
 }
 
@@ -410,7 +412,7 @@ mark {
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 5vh;
-    border: .8vmax solid #000000;
+    border: .8vmax solid black;
   }
 
   .project-thumbnail-container {
