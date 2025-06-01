@@ -1,12 +1,13 @@
 :root {
-  --color-one: rgb(150, 150, 150);
-  --color-two: #0519ff;
-  --color-three: #FFFFE4;
-  --highlight-color: #3cff00;
+  --color-one: black;
+  --highlight-color: #0519ff;
+  --contrast-color: white;
+  --accents-color: lime;
+  --page-background-color: #FFFFE4;
 }
 
 body {
-  background-color: var(--color-three);
+  background-color: var(--page-background-color);
   overflow: auto;
   position: static;
   height: auto;
@@ -39,24 +40,24 @@ h2 {
 
 .inner-link:hover {
   text-transform: lowercase;
-  color: var(--color-one);
   z-index: 1;
 }
 
 .text-inner-link {
   text-decoration: underline;
   font-weight: bold;
-  color: black;
+  color: var(--color-one);
 }
 
 .text-inner-link:hover {
-  color: var(--color-one);
+  color: var(--contrast-color);
+  background-color: var(--highlight-color);
 }
 
 
 .lletra-gran {
   /* Vertically centers content */
-  color: black;
+  color: var(--color-one);
   font-family: "funkier_title";
   font-size: clamp(5rem, 6vw, 9.5em);
   letter-spacing: -1%;
@@ -155,18 +156,18 @@ h2 {
 
 .header-icon {
   font-size: clamp(2vmax, 3rem, 4vmax);
-  color: black;
+  color: var(--color-one);
 }
 
 .top-header a {
-  color: black;
+  color: var(--color-one);
   text-decoration: none;
   font-size: 1.5rem;
   transition: color 0.2s;
 }
 
 .top-header a:hover {
-  color: var(--color-two); /* LinkedIn blue as hover example */
+  color: var(--highlight-color); /* LinkedIn blue as hover example */
 }
 
 .presentacio-mobil {
@@ -247,9 +248,9 @@ h2 {
 
 .projecte {
   /* Vertically centers  content*/
-  border: .7vmax solid black;
+  border: .7vmax solid var(--color-one);
   border-radius: 20px;
-  background-color: white;
+  background-color: var(--contrast-color);
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: 20vw;
@@ -264,7 +265,7 @@ h2 {
   line-height: 130%;
   font-family: monospace;
   font-size: clamp(12px, 1.7rem, 10vw);
-  color: #000000;
+  color: var(--color-one);
   overflow-wrap: break-word;
   white-space: normal;
   padding: 1vh 3vh 0.5vh 3vh;
@@ -302,18 +303,18 @@ h2 {
 
 .icon-column a {
   text-decoration: none;
-  color: var(--color-two);
+  color: var(--highlight-color);
 }
 
 .icon-column a:hover {
-  color: var(--color-one);
+  color: var(--accents-color);
 }
 
 mark {
   font-family: monospace;
   letter-spacing: 0px;
   color: white;
-  background-color: var(--color-two);
+  background-color: var(--highlight-color);
   padding: 0.2vmax;
 }
 
@@ -412,7 +413,7 @@ mark {
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 5vh;
-    border: .8vmax solid black;
+    border: .8vmax solid var(--color-one);
   }
 
   .project-thumbnail-container {
