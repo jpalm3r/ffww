@@ -1,0 +1,174 @@
+@import url("shared.css");
+
+.lletra-gran {
+  /* Vertically centers content */
+  color: var(--color-one);
+  font-family: "funkier_title";
+  font-size: clamp(5rem, 6.7vw, 10em);
+  letter-spacing: -1%;
+  display: inline-block; /* required for transform */
+  transform: scaleX(1.3) scaleY(2.1);  /*1.5 = 150% taller */
+  }
+  
+
+.work {
+    margin: auto auto auto 0;
+    transform-origin: left;
+}
+  
+.fun {
+margin: auto 0 auto auto;
+transform-origin: center;
+}
+
+.fun-work {
+margin: auto;
+transform-origin: right;
+word-wrap: normal;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 18vw 44vw 20vw;
+grid-template-rows: 20vh 20vh 20vh; /* 3 equal-height rows */
+width: 100vw;
+height: 100vh;
+left: 0;
+row-gap: 3vh;
+column-gap: 4vh;
+box-sizing: border-box;
+padding: 20vh 6vw 17vw 6vw;
+}
+
+.item {
+display: flex;
+}
+
+.image-box {
+position: relative;
+overflow: visible;
+}
+
+
+.overlay-text {
+font-family: monospace;
+font-weight: 500;
+font-size: clamp(1.5rem, 1.5vmax, 2.5rem);
+line-height: 1.3em;
+width: 100%;
+z-index: 1;
+}
+
+
+.geese-in {
+position: fixed;
+top: 45%;
+left: 0%;
+transform: translate(-40%, -50%);
+z-index: -1;
+height: 50%;
+width: auto;
+}
+
+.geese-out {
+position: fixed;
+top: 50%;
+left: 100%;
+transform: translate(-40%, -50%);
+z-index: -1;
+height: 50%;
+width: auto;
+}
+
+
+.presentacio-mobil {
+display: none;
+font-family: monospace;
+font-weight: 500;
+font-size: clamp(1.4rem, 1.2vmax, 2.5rem);
+line-height: 1.3em;
+width: 100%;
+z-index: 1;
+top: 0;
+text-align: right;
+margin-right: 2vw;
+margin-bottom: 2vh;
+width: 100%;
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto 0.7fr 2fr;
+      gap: 5px;
+      padding: 5vh 4vw 2vh 4vw;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+      position: absolute;
+    }
+  
+
+  
+    .geese-in {
+      display: none;
+    }
+    .geese-out {
+      top: 35%;
+      height: 60%;
+    }
+    .overlay-text {
+      display: none;
+    }
+
+    /* Hide unwanted items */
+    .grid-container > .item:nth-child(1),
+    .grid-container > .item:nth-child(2),
+    .grid-container > .item:nth-child(3),
+    .grid-container > .item:nth-child(7),
+    .grid-container > .item:nth-child(8) {
+        display: none;
+    }
+  
+    /* Reorder visible items */
+    .grid-container > .item:nth-child(4) { order: 1;} 
+    .grid-container > .item:nth-child(5) { order: 2;} 
+    .grid-container > .item:nth-child(6) { order: 3;}
+    .grid-container > .item:nth-child(9) { order: 4;}
+  
+    .presentacio-mobil {
+      display: block;
+    }
+  
+    .work {
+      text-align: right;
+      margin: 0 0 auto auto;
+    }
+  
+    .fun {
+      margin: auto auto 0 0;
+      text-align: center;
+    }
+  
+    .fun-work {
+      grid-column: auto;
+      margin: auto 0 auto 0;
+      transform-origin: bottom;
+      text-align: left;
+      max-width: 100%;
+    }
+  
+    .image-box {
+      grid-row: auto;
+      height: 100%; /* Set a height so the absolutely-positioned image fills it */
+      width: auto;
+      position: relative;
+      overflow: visible;
+    }
+
+    .lletra-gran {
+      transform: none;
+      font-size: 17.5vh;
+    }
+  }
+  
