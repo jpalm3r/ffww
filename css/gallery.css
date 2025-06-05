@@ -1,0 +1,40 @@
+@import url("shared.css");
+
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Title on the left */
+.gallery-title {
+  text-align: left;
+  padding-top: 0;
+  font-size: 1.2rem;
+  width: 5vw;
+}
+
+/* Grid of thumbnails */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* Images */
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@media (max-width: 900px) {
+
+  .gallery-title {
+    width: 20vw;
+  }
+}
