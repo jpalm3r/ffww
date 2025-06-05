@@ -108,6 +108,10 @@ font-size: clamp(2vmax, 3rem, 4vmax);
 color: var(--color-one);
 }
 
+.header-icon:hover {
+  color: var(--highlight-color);
+  }
+
 .top-header a {
 color: var(--color-one);
 text-decoration: none;
