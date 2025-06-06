@@ -80,6 +80,7 @@ text-orientation: upright;
 .lletra-idioma {
   /* Vertically centers  content*/
   font-family: Arial;
+  font-style: italic;
   font-weight: 900;
   font-size: clamp(1.7vmax, 1rem, 4vmax);
   margin: .5vmin 0 .5vmin 0;
@@ -101,6 +102,8 @@ right: 20px;
 display: flex;
 gap: 15px;
 z-index: 999;
+align-items: center;
+justify-content: center;
 }
 
 .header-icon {
