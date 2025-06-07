@@ -35,7 +35,7 @@ width: 100vw;
 height: 100vh;
 left: 0;
 row-gap: 3vh;
-column-gap: 4vh;
+column-gap: 3vh;
 box-sizing: border-box;
 padding: 20vh 6vw 17vw 6vw;
 }
