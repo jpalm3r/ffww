@@ -8,18 +8,18 @@
     font-size: clamp(5rem, 5.5vw, 9em);
     letter-spacing: -1%;
     display: inline-block; /* required for transform */
-    transform: scaleX(1.3) scaleY(2.4);  /*1.5 = 150% taller */
+    transform: scaleX(1.1) scaleY(2.4);  /*1.5 = 150% taller */
 }
     
 
 .work {
-    margin: auto auto auto 0;
+    margin: auto 0 auto auto;
     transform-origin: right;
 }
   
 .fun {
-margin: auto 0 auto auto;
-transform-origin: left;
+  margin: auto auto auto 0;
+  transform-origin: left;
 }
 
 .fun-work {
@@ -30,7 +30,7 @@ word-wrap: normal;
 
 .grid-container {
 display: grid;
-grid-template-columns: 18vw 44vw 20vw;
+grid-template-columns: 20vw 40vw 20vw;
 grid-template-rows: 20vh 20vh 20vh; /* 3 equal-height rows */
 width: 100vw;
 height: 100vh;
@@ -38,7 +38,7 @@ left: 0;
 row-gap: 1vh;
 column-gap: 4vh;
 box-sizing: border-box;
-padding: 20vh 6vw 17vw 6vw;
+padding: 20vh 6vw 17vw 7vw;
 }
 
 .item {
