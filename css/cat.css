@@ -5,7 +5,7 @@
     /* Vertically centers content */
     color: var(--color-one);
     font-family: "funkier_title";
-    font-size: clamp(5rem, 5.4vw, 8em);
+    font-size: clamp(5rem, 5.3vw, 8em);
     letter-spacing: -1%;
     display: inline-block; /* required for transform */
     transform: scaleX(1.1) scaleY(2.4);  /*1.5 = 150% taller */
@@ -30,7 +30,7 @@ word-wrap: normal;
 
 .grid-container {
 display: grid;
-grid-template-columns: 20vw 40vw 20vw;
+grid-template-columns: 20vw 43vw 20vw;
 grid-template-rows: 20vh 20vh 20vh; /* 3 equal-height rows */
 width: 100vw;
 height: 100vh;
