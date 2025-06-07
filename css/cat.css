@@ -30,7 +30,7 @@ word-wrap: normal;
 
 .grid-container {
 display: grid;
-grid-template-columns: 20vw 43vw 20vw;
+grid-template-columns: 1fr 2fr 1fr;
 grid-template-rows: 20vh 20vh 20vh; /* 3 equal-height rows */
 width: 100vw;
 height: 100vh;
