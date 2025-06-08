@@ -55,6 +55,14 @@ color: var(--contrast-color);
 background-color: var(--highlight-color);
 }
 
+.hola-que-tal {
+  text-align: left;
+  padding-left: 20vw;
+  padding-top: 15vh;
+  position: absolute;
+  width: 40vw;
+}
+
 
 .lletra-gran {
 /* Vertically centers content */
@@ -134,6 +142,63 @@ mark {
     padding: 0.2vmax;
 }
 
+
+.item {
+  display: flex;
+  }
+
+.image-box {
+  position: relative;
+  overflow: visible;
+}
+
+
+.overlay-text {
+  font-family: monospace;
+  font-weight: 500;
+  font-size: clamp(1rem, 1.5vmax, 2.5rem);
+  line-height: 1.3em;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.geese-in {
+  position: fixed;
+  top: 45%;
+  left: 0%;
+  transform: translate(-40%, -50%);
+  z-index: -1;
+  height: 50%;
+  width: auto;
+}
+
+.geese-out {
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translate(-40%, -50%);
+  z-index: -1;
+  height: 50%;
+  width: auto;
+}
+
+
+.presentacio-mobil {
+  display: none;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 1.2vmax, 2.5rem);
+  line-height: 1.3em;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  text-align: right;
+  margin-right: 2vw;
+  margin-bottom: 2vh;
+  width: 100%;
+}
+  
 
 
 @media (max-width: 900px) {

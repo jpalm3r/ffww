@@ -5,7 +5,7 @@
     /* Vertically centers content */
     color: var(--color-one);
     font-family: "funkier_title";
-    font-size: clamp(4.4rem, 5.5vw, 8em);
+    font-size: clamp(3rem, 5.5vw, 8em);
     letter-spacing: -1%;
     display: inline-block; /* required for transform */
     transform: scaleX(1.1) scaleY(2.4);  /*1.5 = 150% taller */
@@ -41,61 +41,6 @@ box-sizing: border-box;
 padding: 20vh 6vw 17vw 7vw;
 }
 
-.item {
-display: flex;
-}
-
-.image-box {
-position: relative;
-overflow: visible;
-}
-
-
-.overlay-text {
-font-family: monospace;
-font-weight: 500;
-font-size: clamp(1.5rem, 1.5vmax, 2.5rem);
-line-height: 1.3em;
-width: 100%;
-z-index: 1;
-}
-
-
-.geese-in {
-position: fixed;
-top: 45%;
-left: 0%;
-transform: translate(-40%, -50%);
-z-index: -1;
-height: 50%;
-width: auto;
-}
-
-.geese-out {
-position: fixed;
-top: 50%;
-left: 100%;
-transform: translate(-40%, -50%);
-z-index: -1;
-height: 50%;
-width: auto;
-}
-
-
-.presentacio-mobil {
-display: none;
-font-family: monospace;
-font-weight: 500;
-font-size: clamp(1.4rem, 1.2vmax, 2.5rem);
-line-height: 1.3em;
-width: 100%;
-z-index: 1;
-top: 0;
-text-align: right;
-margin-right: 2vw;
-margin-bottom: 2vh;
-width: 100%;
-}
 
 @media (max-aspect-ratio: 4/3) {
     .grid-container {
